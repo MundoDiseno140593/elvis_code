@@ -15,7 +15,26 @@ body {
   object-fit: cover;
   border-radius: 50%;
   border: 4px solid #38bdf8;
-  box-shadow: 0 0 40px rgba(56, 189, 248, 0.3);
+  box-shadow: 0 0 40px rgba(56, 189, 248, 0.35);
+  animation: glow 4s ease-in-out infinite;
+}
+
+.hero-bg {
+  position: relative;
+  background: linear-gradient(
+      135deg,
+      rgba(2, 6, 23, 0.95),
+      rgba(15, 23, 42, 0.85)
+    ),
+    url("../img/fondo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
 }
 
 .section {
@@ -54,4 +73,223 @@ body {
   padding: 20px;
   background: #020617;
   font-size: 14px;
+}
+
+/* ===== Animaciones base ===== */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-content {
+  animation: fadeUp 1.2s ease forwards;
+}
+
+.hero-content:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.hero-content:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.hero-img {
+  animation: glow 4s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 30px rgba(56, 189, 248, 0.25);
+  }
+  50% {
+    box-shadow: 0 0 60px rgba(56, 189, 248, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 30px rgba(56, 189, 248, 0.25);
+  }
+}
+
+.hero-bg {
+  background-size: 110%;
+  animation: bgMove 20s ease-in-out infinite alternate;
+}
+
+@keyframes bgMove {
+  from {
+    background-position: center top;
+  }
+  to {
+    background-position: center bottom;
+  }
+}
+
+.btn {
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.animate {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: textFadeUp 1s ease forwards;
+  animation-fill-mode: both; /* 🔥 ESTO ES LA CLAVE */
+}
+
+@keyframes textFadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.delay-1 {
+  animation-delay: 0.3s;
+}
+.delay-2 {
+  animation-delay: 0.6s;
+}
+.delay-3 {
+  animation-delay: 0.9s;
+}
+.delay-4 {
+  animation-delay: 1.2s;
+}
+.delay-5 {
+  animation-delay: 1.5s;
+}
+.delay-6 {
+  animation-delay: 1.8s;
+}
+
+.animate {
+  opacity: 0;
+}
+
+@media (max-width: 576px) {
+  .hero-name {
+    padding: 6px 12px;
+    border-radius: 8px;
+    box-shadow: 0 0 18px rgba(56, 189, 248, 0.3);
+    text-shadow: 0 0 8px rgba(56, 189, 248, 0.45),
+      0 0 18px rgba(56, 189, 248, 0.25);
+  }
+
+  .hero-role::after {
+    bottom: -4px;
+  }
+}
+
+@media (max-width: 991px) {
+  .hero h1 {
+    font-size: 2.4rem;
+  }
+
+  .hero h4 {
+    font-size: 1.4rem;
+  }
+
+  .hero-img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
+}
+
+@media (min-width: 1400px) {
+  .hero h1 {
+    font-size: 3.2rem;
+  }
+
+  .hero h4 {
+    font-size: 1.7rem;
+  }
+
+  .hero-img {
+    width: 320px;
+    height: 320px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+.hero-name {
+  color: #ffffff;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  text-shadow: 0 0 12px rgba(59, 189, 245, 0.637),
+    0 0 30px rgba(56, 189, 248, 0.35), 0 0 60px rgba(56, 189, 248, 0.25);
+  animation: namePulse 5s ease-in-out infinite;
+}
+
+@keyframes namePulse {
+  0% {
+    text-shadow: 0 0 10px rgba(56, 189, 248, 0.45),
+      0 0 25px rgba(56, 189, 248, 0.25), 0 0 50px rgba(56, 189, 248, 0.18);
+  }
+  50% {
+    text-shadow: 0 0 18px rgba(56, 189, 248, 0.75),
+      0 0 45px rgba(56, 189, 248, 0.55), 0 0 90px rgba(56, 189, 248, 0.35);
+  }
+  100% {
+    text-shadow: 0 0 10px rgba(56, 189, 248, 0.45),
+      0 0 25px rgba(56, 189, 248, 0.25), 0 0 50px rgba(56, 189, 248, 0.18);
+  }
+}
+
+@keyframes nameGlow {
+  0% {
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 45px rgba(56, 189, 248, 0.55);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+  }
+}
+
+.hero-role {
+  position: relative;
+  display: inline-block;
+}
+
+.hero-role::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #38bdf8, transparent);
+  animation: underlineMove 3s ease-in-out infinite;
+}
+
+@keyframes underlineMove {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
 }
