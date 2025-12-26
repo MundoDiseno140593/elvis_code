@@ -15,6 +15,9 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/sobremi.css">
+    <link rel="stylesheet" href="css/service.css">
+    <link rel="stylesheet" href="css/proyecto.css">
+    <link rel="stylesheet" href="css/contacto.css">
 </head>
 
 <body>
@@ -111,7 +114,7 @@
 
 
     <!-- ================= SERVICIOS ================= -->
-    <section class="section services-section bg-dark-soft" id="services">
+    <section class="section services-section services-bg" id="services">
         <div class="container">
 
             <h2 class="section-title text-center mb-5">
@@ -121,7 +124,7 @@
 
             <div class="row g-4">
 
-                <!-- SISTEMAS WEB -->
+                <!-- CARD -->
                 <div class="col-md-6 col-lg-4 reveal">
                     <div class="service-card">
                         <i class="bi bi-code-slash"></i>
@@ -133,7 +136,6 @@
                     </div>
                 </div>
 
-                <!-- BACKEND / APIS -->
                 <div class="col-md-6 col-lg-4 reveal">
                     <div class="service-card">
                         <i class="bi bi-diagram-3"></i>
@@ -145,7 +147,6 @@
                     </div>
                 </div>
 
-                <!-- AUTOMATIZACIÓN -->
                 <div class="col-md-6 col-lg-4 reveal">
                     <div class="service-card">
                         <i class="bi bi-gear"></i>
@@ -157,31 +158,28 @@
                     </div>
                 </div>
 
-                <!-- PROYECTOS DE TITULACIÓN -->
                 <div class="col-md-6 col-lg-4 reveal">
                     <div class="service-card service-academic">
                         <i class="bi bi-mortarboard"></i>
                         <h5>Proyectos de Titulación</h5>
                         <p>
-                            Desarrollo y asesoría en proyectos de fin de carrera,
-                            sistemas académicos, documentación y soporte técnico completo.
+                            Desarrollo y asesoría en proyectos de fin de carrera, sistemas académicos
+                            y soporte técnico completo.
                         </p>
                     </div>
                 </div>
 
-                <!-- ASESORÍA UNIVERSITARIA -->
                 <div class="col-md-6 col-lg-4 reveal">
                     <div class="service-card service-academic">
                         <i class="bi bi-journal-code"></i>
-                        <h5>Asesoría Académica en Programación</h5>
+                        <h5>Asesoría Académica</h5>
                         <p>
-                            Apoyo técnico en proyectos universitarios, prácticas,
-                            algoritmos, bases de datos y desarrollo de software.
+                            Apoyo técnico en proyectos universitarios, algoritmos,
+                            bases de datos y desarrollo de software.
                         </p>
                     </div>
                 </div>
 
-                <!-- SISTEMAS EDUCATIVOS -->
                 <div class="col-md-6 col-lg-4 reveal">
                     <div class="service-card service-academic">
                         <i class="bi bi-laptop"></i>
@@ -199,30 +197,171 @@
 
 
     <!-- ================= PROYECTOS ================= -->
-    <section class="section" id="proyectos">
+    <section class="section projects-section" id="proyectos">
         <div class="container">
-            <h2 class="section-title">Proyectos</h2>
-            <p class="text-muted">
-                Sistemas reales desarrollados para resolver necesidades concretas.
+
+            <h2 class="section-title text-center mb-3">
+                Proyectos
+                <span class="title-line mx-auto"></span>
+            </h2>
+
+            <p class="text-center text-muted mb-5">
+                Sistemas reales desarrollados para resolver necesidades concretas en
+                instituciones, negocios y entornos académicos.
             </p>
+
+            <div class="row g-4">
+
+                <!-- SISTEMA ACADÉMICO -->
+                <div class="col-md-6 col-lg-4 reveal">
+                    <div class="project-card">
+                        <h5>Sistema Académico Integral</h5>
+                        <p>
+                            Plataforma completa para la gestión académica: estudiantes,
+                            matrículas, notas, certificados y reportes. Desarrollado desde cero,
+                            incluyendo backend, frontend y base de datos.
+                        </p>
+                        <span class="project-tag">Educación</span>
+                    </div>
+                </div>
+
+                <!-- VALIDACIÓN QR -->
+                <div class="col-md-6 col-lg-4 reveal">
+                    <div class="project-card">
+                        <h5>Validación de Títulos Universitarios con QR</h5>
+                        <p>
+                            Sistema de verificación de títulos universitarios mediante códigos QR,
+                            con validación en tiempo real, control administrativo y seguridad de datos.
+                        </p>
+                        <span class="project-tag">QR · Seguridad</span>
+                    </div>
+                </div>
+
+                <!-- SISTEMA MÉDICO -->
+                <div class="col-md-6 col-lg-4 reveal">
+                    <div class="project-card">
+                        <h5>Sistema de Gestión de Citas Médicas</h5>
+                        <p>
+                            Plataforma para clínicas con agenda médica, gestión de pacientes,
+                            recordatorios automáticos y módulo de consulta médica bajo el enfoque SOAP.
+                        </p>
+                        <span class="project-tag">Salud</span>
+                    </div>
+                </div>
+
+                <!-- FARMACIA LARAVEL -->
+                <div class="col-md-6 col-lg-4 reveal">
+                    <div class="project-card">
+                        <h5>Sistema de Farmacia (Laravel)</h5>
+                        <p>
+                            Sistema de gestión para farmacias desarrollado en Laravel:
+                            control de productos, inventario, ventas, proveedores y reportes.
+                        </p>
+                        <span class="project-tag">Laravel · Inventario</span>
+                    </div>
+                </div>
+
+                <!-- FARMACIA LARAVEL + REACT -->
+                <div class="col-md-6 col-lg-4 reveal">
+                    <div class="project-card">
+                        <h5>Sistema de Farmacia (Laravel + React)</h5>
+                        <p>
+                            Versión moderna del sistema de farmacia con backend en Laravel
+                            y frontend en React, orientado a rendimiento, escalabilidad y mejor experiencia de usuario.
+                        </p>
+                        <span class="project-tag">Laravel · React</span>
+                    </div>
+                </div>
+
+                <!-- POS E INVENTARIO -->
+                <div class="col-md-6 col-lg-4 reveal">
+                    <div class="project-card">
+                        <h5>Sistema POS, Ventas e Inventario</h5>
+                        <p>
+                            Sistema de punto de venta con control de inventario, ventas,
+                            reportes y seguimiento de movimientos, enfocado en negocios comerciales.
+                        </p>
+                        <span class="project-tag">POS · Ventas</span>
+                    </div>
+                </div>
+
+                <!-- CERTIFICADOS -->
+                <div class="col-md-6 col-lg-4 reveal">
+                    <div class="project-card">
+                        <h5>Generación de Certificados Académicos</h5>
+                        <p>
+                            Sistema automatizado para generar certificados de notas y documentos
+                            académicos en PDF, con validaciones por carrera, semestre y normativa.
+                        </p>
+                        <span class="project-tag">Automatización</span>
+                    </div>
+                </div>
+
+                <!-- REGISTRO ACADÉMICO -->
+                <div class="col-md-6 col-lg-4 reveal">
+                    <div class="project-card">
+                        <h5>Sistema de Registro Académico</h5>
+                        <p>
+                            Sistema de registro académico para pregrado y posgrado,
+                            con gestión administrativa y estructura de datos compleja.
+                        </p>
+                        <span class="project-tag">Backend · BD</span>
+                    </div>
+                </div>
+
+                <!-- AUTOMATIZACIÓN -->
+                <div class="col-md-6 col-lg-4 reveal">
+                    <div class="project-card">
+                        <h5>Automatización de Procesos Institucionales</h5>
+                        <p>
+                            Desarrollo de soluciones para automatizar procesos administrativos,
+                            reducir trabajo manual y mejorar la eficiencia operativa.
+                        </p>
+                        <span class="project-tag">Automatización</span>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </section>
 
+
+
     <!-- ================= CONTACTO ================= -->
-    <section class="section bg-dark-soft" id="contacto">
-        <div class="container text-center">
-            <h2 class="section-title">¿Tienes un proyecto?</h2>
-            <p class="mb-4">Conversemos y veamos cómo puedo ayudarte.</p>
-            <a href="https://wa.me/TUNUMERO" class="btn btn-success btn-lg">
-                <i class="bi bi-whatsapp"></i> WhatsApp
-            </a>
+    <section class="section contact-section contact-bg" id="contacto">
+        <div class="container">
+            <div class="contact-card reveal text-center">
+
+                <h2 class="section-title mb-3">
+                    ¿Tienes un proyecto en mente?
+                    <span class="title-line mx-auto"></span>
+                </h2>
+
+                <p class="contact-text mb-4">
+                    Conversemos sobre tu idea y veamos cómo convertirla en una
+                    <strong>solución digital funcional, escalable y orientada a resultados</strong>.
+                </p>
+
+                <a href="https://wa.me/86479297" target="_blank" class="btn btn-whatsapp btn-lg">
+                    <i class="bi bi-whatsapp me-2"></i>
+                    Escríbeme por WhatsApp
+                </a>
+
+            </div>
         </div>
     </section>
+
 
     <!-- ================= FOOTER ================= -->
     <footer class="footer text-center">
         <p>© 2026 Elvis Code — Desarrollo de software profesional</p>
     </footer>
+
+    <!-- ===== WhatsApp Floating Button ===== -->
+    <a href="https://wa.me/86479297" target="_blank" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
