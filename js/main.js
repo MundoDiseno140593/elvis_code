@@ -122,3 +122,96 @@ if (whatsappFloat) {
   createStars();
   drawStars();
 })();
+
+
+// ===== Mouse Parallax (Hero) =====
+(() => {
+  const hero = document.querySelector(".hero");
+  const heroText = document.querySelector(".hero-content");
+  const heroImg = document.querySelector(".hero-img");
+
+  if (!hero || !heroText || !heroImg) return;
+
+  // Desactivar en móviles
+  if (window.innerWidth < 992) return;
+
+  hero.addEventListener("mousemove", (e) => {
+    const rect = hero.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+
+    const moveX = (x - centerX) / centerX;
+    const moveY = (y - centerY) / centerY;
+
+    // Texto (movimiento mínimo)
+    heroText.style.transform = `
+      translate(${moveX * 8}px, ${moveY * 8}px)
+    `;
+
+    // Imagen (un poco más de profundidad)
+    heroImg.style.transform = `
+      translate(${moveX * 18}px, ${moveY * 18}px)
+    `;
+  });
+
+  hero.addEventListener("mouseleave", () => {
+    heroText.style.transform = "translate(0, 0)";
+    heroImg.style.transform = "translate(0, 0)";
+  });
+})();
+
+
+// ===== Proyectos description enhancement =====
+(() => {
+  const el = document.getElementById("projects-desc");
+  if (!el) return;
+
+  // Palabras clave a resaltar
+  const keywords = [
+    "Sistemas reales",
+    "necesidades concretas",
+    "instituciones",
+    "negocios",
+    "entornos académicos"
+  ];
+
+  let html = el.innerHTML;
+
+  keywords.forEach(word => {
+    const regex = new RegExp(word, "gi");
+    html = html.replace(
+      regex,
+      `<span style="
+        color:#38bdf8;
+        font-weight:600;
+        text-shadow:0 0 8px rgba(56,189,248,.5);
+      ">${word}</span>`
+    );
+  });
+
+  el.innerHTML = html;
+
+  // Estado inicial (animación)
+  el.style.opacity = "0";
+  el.style.transform = "translateY(20px)";
+  el.style.transition = "opacity 0.8s ease, transform 0.8s ease";
+
+  // Reveal cuando entra en pantalla
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting) {
+        el.style.opacity = "1";
+        el.style.transform = "translateY(0)";
+        observer.disconnect();
+      }
+    },
+    { threshold: 0.4 }
+  );
+
+  observer.observe(el);
+})();
+
+
