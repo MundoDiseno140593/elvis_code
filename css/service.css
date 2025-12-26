@@ -1,0 +1,48 @@
+/* ===== SERVICIOS ===== */
+
+.services-section {
+  position: relative;
+}
+
+.service-card {
+  height: 100%;
+  background: #020617;
+  border: 1px solid rgba(56, 189, 248, 0.15);
+  border-radius: 18px;
+  padding: 32px 26px;
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+.service-card i {
+  font-size: 42px;
+  color: #38bdf8;
+  margin-bottom: 18px;
+}
+
+.service-card h5 {
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  color: #cbd5f5;
+  line-height: 1.6;
+}
+
+/* Hover elegante */
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 40px rgba(56, 189, 248, 0.25);
+  border-color: rgba(56, 189, 248, 0.4);
+}
+
+/* Servicios académicos (sutil diferencia) */
+.service-academic {
+  background: linear-gradient(
+    180deg,
+    rgba(2, 6, 23, 0.9),
+    rgba(15, 23, 42, 0.9)
+  );
+}
